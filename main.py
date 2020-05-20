@@ -43,7 +43,7 @@ def draw(df: pandas.DataFrame):
         line = plt.plot(x_range, df[column].tolist(), lw=2.5,
                         color=color_sequence[rank], label=column)
 
-    fig.suptitle('COVID Poland by region', fontsize=18, ha='center')
+    fig.suptitle('COVID-19 in Poland by region', fontsize=18, ha='center')
     plt.legend()
     plt.show()
 
