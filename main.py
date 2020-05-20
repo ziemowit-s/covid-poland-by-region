@@ -1,3 +1,4 @@
+import mplcursors
 import pandas
 import numpy as np
 import matplotlib.pyplot as plt
@@ -39,11 +40,11 @@ def draw(df: pandas.DataFrame):
     plt.xticks(x_range, df.date.tolist(), rotation=90, fontsize=10)
     plt.yticks(np.arange(start=0, step=50, stop=500), fontsize=10)
     for rank, column in enumerate(df.columns[1:]):
-
         line = plt.plot(x_range, df[column].tolist(), lw=2.5,
                         color=color_sequence[rank], label=column)
-
+        mplcursors.cursor(line)
     fig.suptitle('COVID-19 in Poland by region', fontsize=18, ha='center')
+
     plt.legend()
     plt.show()
 
