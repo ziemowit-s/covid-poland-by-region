@@ -12,4 +12,4 @@ run main.py
 
 ## Example
 After clicking on each curve you can check name of the region and the value.
-![graph](graph-example.png)
+![graph](graph_example.png)
